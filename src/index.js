@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let formEl = document.querySelector("form") 
   
   formEl.addEventListener("submit", submitForm)
-  
 });
 
 function submitForm(event) {
@@ -11,7 +10,8 @@ function submitForm(event) {
 	// console.log("Submit???")
 	let description = document.getElementById("new-task-description").value
 	addTask(description)
-	event.target.reset()
+	
+	event.target.reset()	
 }
 
 function addTask(description) {
@@ -21,4 +21,13 @@ function addTask(description) {
 	newLi.innerText = description
 
 	ul.append(newLi)
+	let makeButton = document.createElement("BUTTON");
+	makeButton.innerHTML = "x";
+	makeButton.setAttribute("id", `${description}`)
+	newLi.appendChild(makeButton)
 }
+
+function deleteTask(task) {
+
+}
+

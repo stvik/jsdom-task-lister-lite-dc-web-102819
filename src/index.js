@@ -11,7 +11,7 @@ function submitForm(event) {
 	let description = document.getElementById("new-task-description").value
 	addTask(description)
 	
-	event.target.reset()	
+	event.target.reset()
 }
 
 function addTask(description) {
